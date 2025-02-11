@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    color: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #333;
+}
+
+h1 {
+    margin: 20px auto;
+}
+
+hr {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.input-parent {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
+}
+
+.input-parent input {
+    width: 50%;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px white;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    margin: auto;
+    width: fit-content;
+}
+
+.input-parent input::placeholder {
+    color: white;
+}
+
+.input-parent button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: solid 1px white;
+    cursor: pointer;
+}
+
+.input-parent button:hover {
+    background-color: white;
+    color: #333;
+}
+
+.mode-toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+}
+
+.task-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.task-list {
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    border: solid 1px #333;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+/* Remove space before checkbox and set alignment */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Control the space between checkbox and text */
+    margin: 5px 0;
+}
+
+.task-item input[type="checkbox"] {
+    margin: 0; /* Remove default margin */
+    padding: 0;
+}
+
+.task-item label {
+    flex: 1; /* Allow label to take up remaining space */
+}
+
+.saved-task {
+    margin: 5px 0;
+}
+
+.saved-group {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px dotted white;
+    border-radius: 20px;
+}
+
+.saved-group-header {
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.saved-task {
+    margin-left: 10px;
+}
+.buttons button {
+    background-color: #333;
+    color: white;
+    border: 1px solid white;
+}
+.buttons button:hover {
+    background-color: white;
+    color: #333;
+    border-color: #333;
+}
+/* Add this to your existing CSS */
+.task-item input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.saved-task input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.status {
+    font-weight: bold;
+    margin-left: 10px;
+    color: green;
+}
+
+.status.false {
+    color: red;
+}
+.saved-task {
+    padding: 5px 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.saved-task label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.saved-task .task-status {
+    font-size: 1rem;
+    color: #333;
+}
+button:hover {
+    border: 1px solid white;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h1>To-Do List</h1>
+        <br>
+        <hr>
+        <br>
+        <br>
+
+        <div class="input-parent">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <br>
+
+        <div class="task-list-container">
+            <div class="task-list">
+                <h2>Active Tasks</h2>
+                <br>
+                <br>
+                <ul id="activeTaskList"></ul>
+            </div>
+            <div class="task-list">
+                <h2>Expired Tasks</h2>
+                <br>
+                <br>
+                <ul id="expiredTaskList"></ul>
+            </div>
+        </div>
+        <br>
+
+        <div class="buttons">
+            <button id="saveTasksBtn" style="display: none;">Save Tasks</button>
+            <button id="deleteAllTasksBtn" style="display: none;">Delete All Tasks</button>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="saved-tasks-container">
+            <h2>Saved Tasks</h2>
+            <div id="savedTasksContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
