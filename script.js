@@ -45,14 +45,14 @@ function createTaskElement(task) {
 
     const status = document.createElement('span');
     status.classList.add('task-status');
-    status.textContent = task.completed ? '✔️ True' : '❌ False';
+    status.textContent = task.completed ? '✔️' : '❌';
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
 
     checkbox.addEventListener('change', () => {
         task.completed = checkbox.checked;
-        status.textContent = task.completed ? '✔️ True' : '❌ False'; // Update status text
+        status.textContent = task.completed ? '✔️' : '❌'; // Update status text
         if (task.completed) {
             moveToExpiredList(li);
         } else {
@@ -155,6 +155,7 @@ function createSavedTaskElement(task) {
     savedTask.classList.add('saved-task');
     savedTask.style.display = 'flex'; // Make them look like a list with flexbox
     savedTask.style.alignItems = 'center'; // Vertically center the items
+    savedTask.style.justifyContent = 'space-between'; // Vertically center the items
 
     const label = document.createElement('label');
     label.textContent = task.querySelector('label').textContent;
@@ -163,6 +164,8 @@ function createSavedTaskElement(task) {
     status.classList.add('task-status');
     const isCompleted = task.querySelector('.task-checkbox').checked;
     status.textContent = isCompleted ? '✔️ True' : '❌ False';
+    status.style.color = 'white';
+    status.style.marginRight = '10px';
 
     // Add space between the label and the status
     label.style.marginRight = '10px'; // Adjust the space here
